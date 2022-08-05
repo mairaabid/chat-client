@@ -1,0 +1,698 @@
+.primaryHeading {
+  display: inline-block;
+  padding: 5px;
+  font-size: 2rem;
+  width: 100%;
+  text-transform: capitalize;
+  color: #3e3e3e;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.goToProfileHeading {
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+
+.goToProfileHeading:hover {
+  color: #3a8fd5;
+  font-size: 1.2rem;
+}
+
+.postDeleteIcon {
+  margin: 0 0 0 auto;
+  transition: all 0.3s;
+}
+
+.postDeleteIcon:hover {
+  color: crimson;
+  font-size: 1.6rem;
+
+  transform: translateY(-0.5rem);
+}
+
+@media only screen and (max-width: 800px) {
+  .primaryHeading {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    padding: 10px !important;
+  }
+
+  .postFeedCartContainer {
+    padding: 0 !important;
+  }
+}
+
+#root {
+  height: 100vh;
+}
+.ant-layout {
+  height: 100%;
+}
+
+.ant-layout-sider-children::-webkit-scrollbar {
+  display: none;
+}
+.ant-layout-sider-children {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.app-footer {
+  padding: 1rem 0.5rem;
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.content-wrapper {
+  height: 100%;
+  padding: 1rem;
+  background-color: rgb(252, 252, 252);
+  overflow: auto;
+
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.userImage {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.user-content-wrapper {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border: 1px solid rgba(219, 219, 219, 0.548);
+  cursor: pointer;
+  transition: all 1s;
+  margin-bottom: 1rem;
+}
+
+.user-content-wrapper:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+/* Message Related Styles */
+.message {
+  max-width: 300px;
+  word-wrap: break-word;
+  margin-bottom: 1.7rem;
+  line-height: 24px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.messageSentBy {
+  /* position: absolute;
+  top: -25px; */
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000;
+  /* left: 0; */
+  display: block;
+  /* width: 90%; */
+}
+
+.message:before,
+.message:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+}
+
+.send {
+  color: var(--send-color);
+  background: var(--send-bg);
+  align-self: flex-end;
+}
+
+.send:before {
+  right: -7px;
+  width: 20px;
+  background-color: var(--send-bg);
+  border-bottom-left-radius: 16px 14px;
+}
+
+.send:after {
+  right: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-left-radius: 10px;
+}
+.receive {
+  background: var(--receive-bg);
+  color: black;
+  align-self: flex-start;
+}
+.receive:before {
+  left: -7px;
+  width: 20px;
+  background-color: var(--receive-bg);
+  border-bottom-right-radius: 16px 14px;
+}
+.receive:after {
+  left: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-right-radius: 10px;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+}
+
+.messageStatus {
+  display: block;
+  font-size: 15px;
+}
+
+.messageCreatedAt {
+  position: absolute;
+  top: -1.4rem;
+  color: #5e5d5d;
+}
+
+.send .messageStatus {
+  text-align: end;
+  color: var(--receive-bg);
+}
+
+.receive .messageStatus {
+  text-align: start;
+  color: var(--send-bg);
+}
+
+.messageListWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  padding-top: 2rem;
+}
+
+.messageSendForm {
+  display: flex;
+  flex-direction: row;
+}
+
+:root {
+  --send-bg: #0b93f6;
+  --send-color: white;
+  --receive-bg: #e5e5ea;
+  --receive-text: black;
+  --page-background: white;
+}
+
+.ant-layout-content {
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+.appHeaderTitle {
+  font-size: 1.2rem;
+  color: #3a8fd5;
+  font-family: system-ui;
+}
+
+.logoContainer {
+  display: block;
+  overflow: hidden;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.logoContainer__img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.sideMenuContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideMenu {
+  overflow-y: auto;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chatContainer__actions {
+  position: sticky;
+  text-align: end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* min-height: 50px; */
+  /* box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7);
+  -webkit-box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7);
+  -moz-box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7); */
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.chatContainer__chattingWith {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.sideNavProfile__description {
+  display: flex;
+  align-items: center;
+}
+
+.sideNavProfile__imgContainer {
+  /* Code will come here */
+}
+
+.profileHeading {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  line-height: 1.2em;
+  margin-left: 5px;
+}
+
+.sideNavProfile__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 2px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+.sideNavProfile__lastSeenText {
+  line-height: 1em;
+  font-size: 0.7rem;
+  filter: brightness(0.8);
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.sideNavProfile {
+  padding: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #ffffff2e;
+  /* margin-bottom: 10px; */
+  background: #1c344a;
+  transition: all 0.3s;
+}
+
+.sideNavProfile:hover {
+  filter: brightness(0.8);
+}
+
+.friends__container .ant-menu-item {
+  padding: 0 !important;
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+.postFeedCartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+
+.postFeedCartContainer .ant-card-body {
+  padding: 0.3rem;
+}
+
+.postFeedCartContainerHoverEffect .ant-card {
+  transform: scale(1);
+  transition: all 0.2s linear;
+}
+
+.postFeedCartContainerHoverEffect .ant-card:hover {
+  transform: scale(1.05);
+  margin: 1rem 0;
+}
+
+.postFeedAuthorContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* .postFeedAuthorDescription {
+  margin-left: 1rem;
+} */
+
+.postFeedTimeAgo {
+  line-height: 0;
+}
+
+.postFeedItemDescription {
+  padding: 0 1rem;
+}
+
+.postFeedAuthorDescription {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+  padding: 0rem 0.5rem;
+}
+
+.heartIconContainer span {
+  font-size: 1.3rem;
+  /* color: red; */
+}
+
+.heartFilledIcon {
+  color: red;
+}
+
+.postFeedItemStatsContainer {
+  display: flex;
+}
+
+.postFeedItemStatsContainer div {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.postFeedItemStatNumber {
+  font-size: 1rem;
+}
+
+.postFeed {
+  padding: 1.5rem 0;
+}
+
+.allPostsPage {
+  position: relative;
+}
+
+.newPostStickyBar {
+  position: sticky;
+  text-align: end;
+  background: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  /* box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7);
+  -webkit-box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7);
+  -moz-box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7); */
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 1rem;
+}
+
+.addPostButton {
+  text-transform: uppercase;
+  box-shadow: 7px 6px 20px -10px rgba(56, 56, 56, 0.7);
+  -webkit-box-shadow: 7px 6px 20px -10px rgb(56, 56, 56);
+  -moz-box-shadow: 7px 6px 20px -10px rgb(56, 56, 56);
+}
+
+.post-comment {
+  padding: 5px 1rem;
+  cursor: pointer;
+  background: none;
+  box-shadow: -2px 2px 5px 0px rgba(194, 194, 194, 0.67);
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.post-comment:hover {
+  background: #f5f2f2;
+}
+
+/* ----------------------------------------- */
+
+.participants {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-gap: 20px;
+  height: 85vh;
+  padding: 10px;
+}
+
+.participants img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+@media (max-width: 800px) {
+  .participants {
+    grid-template-columns: repeat(var(--grid-col-size), 1fr);
+    grid-template-rows: repeat(var(--grid-row-size), 1fr);
+  }
+}
+
+/* Login Page Styles */
+.loginPageContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginPageHeading {
+  color: #fff;
+
+  text-align: center;
+}
+
+#tsparticles canvas {
+  background: none;
+  background: url(https://wallpapercave.com/wp/wp4410724.jpg);
+}
+
+.postFeedAuthorName {
+  transition: all 0.3a;
+}
+
+.postFeedAuthorName:hover {
+  color: #3a8fd5;
+}
+
+.secondaryHeading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/*  Conencting call */
+
+#phone {
+  background-color: black;
+
+  height: 667px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+.main {
+  flex-grow: 1;
+  z-index: 1;
+  text-align: center;
+}
+.footer {
+  flex-basis: 100px;
+}
+.decline,
+.accept {
+  height: 100%;
+  display: inline-block;
+  width: 150px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accept {
+  background-color: #4cda64;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  float: right;
+}
+.decline {
+  border-top-right-radius: 50px;
+  float: left;
+  background-color: #ff3b2f;
+  border-bottom-right-radius: 50px;
+}
+.avatar-wrapper {
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  margin: 100px auto 0 auto;
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.avatar-wrapper::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 50%;
+  animation: 2s pulse infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: none;
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: #4cda64;
+  z-index: -2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.incoming {
+  margin-top: 50px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: gray;
+}
+.name {
+  font-size: 50px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.callBtnActionBtn {
+  text-decoration: none;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: white;
+
+  border-radius: 3rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.acceptCallBtn {
+  background-color: #4cda64;
+  color: black !important;
+  transition: all 0.3s;
+}
+
+.acceptCallBtn:hover {
+  background-color: #5ef076;
+}
+
+.cancelCallBtn {
+  background-color: crimson;
+}
+
+/* Game Page Styles */
+.allGamesAdminSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2rem;
+  align-items: center;
+  background: #bbcee3;
+  margin-bottom: 1rem;
+}
+
+.allGamesAdminSection__message {
+  font-size: 1.03rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.singleGamePlay iframe {
+  width: 100%;
+  height: 80vh !important;
+}
